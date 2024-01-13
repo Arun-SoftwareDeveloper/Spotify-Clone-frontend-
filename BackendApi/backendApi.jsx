@@ -1,3 +1,3 @@
-const backendApi = "http://localhost:4000";
+const backendApi = "https://spotify-clone-i7ni.onrender.com";
 
 export default backendApi;
