@@ -1,0 +1,90 @@
+/* Global Styles */
+body {
+  font-family: "Arial", sans-serif;
+  /* background-color: black; */
+}
+
+.container {
+  margin-top: 50px;
+}
+
+.card {
+  background-color: black;
+  color: whitesmoke;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Header Styles */
+h1 {
+  font-size: 2rem;
+  color: green;
+  margin-bottom: 20px;
+}
+
+/* Form Styles */
+.form-label {
+  font-weight: bold;
+}
+
+.form-control {
+  margin-bottom: 15px;
+}
+
+.invalid-feedback {
+  color: #dc3545;
+}
+
+/* Button Styles */
+.btn-primary {
+  background-color: green;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  background-color: darkgreen;
+}
+
+/* Step Indicator Styles */
+.mb-4 {
+  margin-bottom: 20px;
+}
+
+.fw-bold {
+  font-weight: bold;
+}
+
+/* Radio Button Styles */
+.form-check {
+  margin-bottom: 15px;
+}
+
+/* Spotify Logo Styles */
+.fa-spotify {
+  font-size: 2rem;
+  margin-right: 5px;
+}
+
+/* Spotify Icon Styles */
+.fa-genre {
+  font-size: 1.5rem;
+}
+
+/* Navigation Arrow Styles */
+.fa-chevron-left {
+  cursor: pointer;
+  margin-right: 10px;
+  color: #333;
+}
+
+/* Toast Styles */
+.Toastify__toast {
+  font-family: "Arial", sans-serif;
+}
+
+/* Additional Styles */
+/* Add your own custom styles here */

@@ -1,0 +1,21 @@
+/* src/components/SongsList.css */
+
+.songs-container {
+  max-width: 800px; /* Adjust as needed */
+  margin: 0 auto;
+}
+
+.song-card {
+  margin-bottom: 20px;
+}
+
+.song-image {
+  cursor: pointer;
+  width: 100%;
+  height: 200px; /* Set a fixed height or adjust as needed */
+  object-fit: cover; /* Ensures the image covers the container without distortion */
+}
+
+.play-pause-button {
+  width: 100%;
+}
