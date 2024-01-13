@@ -2,7 +2,7 @@
 
 import React from "react";
 import { NavLink } from "react-router-dom";
-import "../Styles/SIdeBarContainer.css";
+import "../Styles/SideBarContainer.css";
 
 const SIdeBarContainer = ({ nowPlaying, likedSongs }) => {
   return (
