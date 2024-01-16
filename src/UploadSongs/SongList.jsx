@@ -7,6 +7,7 @@ import "../Styles/SongList.css"; // Import your CSS file
 import HeaderContainer from "../Components/HeaderContainer";
 import SideBarContainer from "../Components/SIdeBarContainer";
 import backendApi from "../../BackendApi/backendApi";
+import "../Styles/SongList.css";
 
 const NowPlaying = ({ nowPlaying, handleLikeSong }) => {
   return (
@@ -29,22 +30,17 @@ const NowPlaying = ({ nowPlaying, handleLikeSong }) => {
   );
 };
 
-const LikedSongs = ({ likedSongs }) => {
-  return (
-    <div className="liked-songs-container">
-      <h2>Liked Songs:</h2>
-      {likedSongs.map((likedSong) => (
-        <Card key={likedSong._id}>
-          <Card.Img src={likedSong.imagePath} alt={likedSong.title} />
-          <Card.Body>
-            <Card.Title>{likedSong.title}</Card.Title>
-            <Card.Text>Artist: {likedSong.artist}</Card.Text>
-            <Card.Text>Genre: {likedSong.genre}</Card.Text>
-          </Card.Body>
-        </Card>
-      ))}
-    </div>
-  );
+const handlePlayPause = () => {
+  if (audio) {
+    if (isPlaying) {
+      audio.pause();
+    } else {
+      audio
+        .play()
+        .catch((error) => console.error("Error playing audio:", error.message));
+    }
+    setIsPlaying(!isPlaying);
+  }
 };
 
 const SongList = () => {
@@ -205,19 +201,17 @@ const SongList = () => {
                             </>
                           )}
                         </Card.Text>
+                        <Button
+                          onClick={() => playAudio(song.filePath, index)}
+                          className="play-pause-button"
+                          variant="success"
+                        >
+                          {isPlaying && currentIndex === index
+                            ? "Pause"
+                            : "Play"}
+                        </Button>
                         {hoveredIndex === index && (
-                          <Button
-                            onClick={() => playAudio(song.filePath, index)}
-                            className="play-pause-button"
-                            variant="success"
-                          >
-                            {isPlaying && currentIndex === index
-                              ? "Pause"
-                              : "Play"}
-                          </Button>
-                        )}
-                        {isPlaying && currentIndex === index && (
-                          <div>
+                          <>
                             <Button
                               onClick={handlePrevious}
                               variant="outline-dark"
@@ -227,6 +221,10 @@ const SongList = () => {
                             <Button onClick={handleNext} variant="outline-dark">
                               <i className="fa-solid fa-chevron-right"></i>
                             </Button>
+                          </>
+                        )}
+                        {isPlaying && currentIndex === index && (
+                          <>
                             <br />
                             <input
                               type="range"
@@ -249,7 +247,16 @@ const SongList = () => {
                             >
                               <i className="fa-solid fa-forward"></i>
                             </Button>
-                          </div>
+                          </>
+                        )}
+                        {currentIndex === index && (
+                          <Button
+                            onClick={handleLikeSong}
+                            variant="primary"
+                            className="mt-2"
+                          >
+                            Like
+                          </Button>
                         )}
                       </Card.Body>
                     </Card>

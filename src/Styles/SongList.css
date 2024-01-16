@@ -1,4 +1,98 @@
 /* src/components/SongsList.css */
+/* SongList.css */
+
+/* HeaderContainer styles */
+.HeaderContainer {
+  background-color: #333;
+  color: white;
+  padding: 10px;
+}
+
+/* SidebarContainer styles */
+.SidebarContainer {
+  background-color: #eee;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+/* NowPlaying styles */
+.now-playing-container {
+  margin-bottom: 20px;
+}
+
+.now-playing-container h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.now-playing-container Card {
+  margin-top: 20px;
+}
+
+.now-playing-container Button {
+  margin-top: 10px;
+}
+
+/* LikedSongs styles */
+.liked-songs-container {
+  margin-top: 40px;
+}
+
+.liked-songs-container h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.liked-songs-container Card {
+  margin-top: 20px;
+}
+
+/* SongsContainer styles */
+.songs-container {
+  margin-top: 40px;
+}
+
+.songs-container Row {
+  justify-content: space-between;
+}
+
+.songs-container .song-card {
+  transition: transform 0.2s;
+  margin-bottom: 20px;
+}
+
+.songs-container .song-card:hover {
+  transform: scale(1.05);
+}
+
+.songs-container .song-image {
+  cursor: pointer;
+}
+
+.songs-container .play-pause-button {
+  margin-top: 10px;
+}
+
+.songs-container input[type="range"] {
+  width: 100%;
+  margin-top: 10px;
+}
+
+.songs-container Button {
+  margin-right: 10px;
+}
+
+/* Audio player styles */
+.audio-player {
+  margin-top: 20px;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .songs-container .song-card {
+    width: 100%;
+  }
+}
 
 .songs-container {
   max-width: 800px; /* Adjust as needed */
