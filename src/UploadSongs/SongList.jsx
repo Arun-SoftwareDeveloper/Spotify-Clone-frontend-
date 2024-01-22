@@ -172,7 +172,6 @@ const SongList = () => {
             <br />
             <br />
             <br />
-            <br />
             <SideBarContainer nowPlaying={nowPlaying} likedSongs={likedSongs} />
           </Col>
           <Col md={9}>
