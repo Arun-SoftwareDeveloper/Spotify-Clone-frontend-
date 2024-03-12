@@ -98,7 +98,8 @@ function RegisterForm() {
   return (
     <div className="container">
       <h1 className="text-left" style={{ color: "green" }}>
-        <i class="fa-brands fa-ARRA"></i>ARRA
+        <i class="fa-brands fa-spotify"></i>
+        <i>ARRA</i>
       </h1>
       <div className="row justify-content-center mt-5">
         <div className="col-md-6">

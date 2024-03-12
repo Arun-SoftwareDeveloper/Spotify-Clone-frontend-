@@ -1,42 +1,52 @@
-/* HeaderContainer.css */
-
 .header-container {
-  padding: 0 15px; /* Add padding for better spacing */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #343a40; /* Dark background color */
+  padding: 10px 20px;
 }
 
-@media (max-width: 767px) {
-  .header-container {
-    padding: 0 10px; /* Reduce padding on smaller screens */
-  }
+.logo-container {
+  flex: 1; /* Takes up remaining space */
 }
 
-.user-icon-container {
-  position: relative; /* Position the dropdown menu relative to the user icon */
-  display: inline-block; /* Ensure the user icon and dropdown menu are displayed inline */
+.logo {
+  color: #1db954; /* Spotify green */
+  font-size: 24px;
+}
+
+.user-container {
+  position: relative;
 }
 
 .user-icon {
-  cursor: pointer;
+  color: #fff; /* White color for icon */
+  font-size: 24px;
+  cursor: pointer; /* Change cursor to pointer on hover */
 }
 
-.hover-container {
+.options-container {
   position: absolute;
-  top: 100%; /* Position the dropdown menu below the user icon */
+  top: 100%; /* Position options below the user icon */
   right: 0;
-  background-color: #fff; /* Background color for the dropdown menu */
-  border: 1px solid #ccc; /* Add border for better visibility */
-  border-radius: 4px; /* Rounded corners for the dropdown menu */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add box shadow for better depth */
-  z-index: 1; /* Ensure the dropdown menu appears above other content */
+  background-color: #fff; /* White background color for options */
+  border-radius: 4px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Box shadow for a subtle effect */
+  padding: 5px 0;
+  z-index: 10; /* Ensure options appear above other content */
 }
 
-.hover-container ul {
-  margin: 0; /* Remove default margin for better layout */
-  padding: 0; /* Remove default padding for better layout */
+.options-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
-.hover-container li {
-  list-style-type: none; /* Remove default list bullet */
-  padding: 8px 16px; /* Add padding to each list item for better spacing */
-  cursor: pointer; /* Change cursor to pointer for better indication of clickable items */
+.options-list li {
+  padding: 10px 20px;
+  cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+.options-list li:hover {
+  background-color: #f8f9fa; /* Light gray background color on hover */
 }
