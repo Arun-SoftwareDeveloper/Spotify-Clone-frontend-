@@ -17,7 +17,7 @@ function HeaderContainer() {
       <div className="row">
         <div className="col-md-6 text-left">
           <h1 className="text-success">
-            <i className="fab fa-spotify"></i> Spotify
+            <i className="fab fa-ARRA"></i> ARRA
           </h1>
         </div>
         <div className="col-md-6 text-right">

@@ -36,7 +36,7 @@ function LoginForm() {
   return (
     <div className="container">
       <h1 className="text-left text-success">
-        <i className="fab fa-spotify"></i> Spotify
+        <i className="fab fa-ARRA"></i> ARRA
       </h1>
       <div className="row justify-content-center mt-5">
         <div className="col-md-6">
@@ -73,7 +73,7 @@ function LoginForm() {
                 <Link to="/">Forgot Password?</Link>
               </p>
               <p>
-                Don't have an account? <Link to="/">Sign up for Spotify</Link>
+                Don't have an account? <Link to="/">Sign up for ARRA</Link>
               </p>
             </div>
           </form>

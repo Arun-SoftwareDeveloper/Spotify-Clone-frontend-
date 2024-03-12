@@ -1,3 +1,3 @@
-const backendApi = "https://spotify-clone-i7ni.onrender.com";
+const backendApi = "https://ARRA-clone-i7ni.onrender.com";
 
 export default backendApi;
