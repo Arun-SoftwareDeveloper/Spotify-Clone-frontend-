@@ -17,7 +17,9 @@ const ArtistSongs = () => {
   useEffect(() => {
     const fetchArtistSongs = async () => {
       try {
-        const response = await fetch(`${backendApi}/${artistName}`);
+        const response = await fetch(
+          `${backendApi}/songs/artist/${artistName}`
+        );
         const data = await response.json();
         setArtistSongs(data);
       } catch (error) {
