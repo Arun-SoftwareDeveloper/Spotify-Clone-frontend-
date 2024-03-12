@@ -1,41 +1,42 @@
 /* HeaderContainer.css */
 
 .header-container {
-  background-color: #343a40; /* Dark background color */
-  padding: 10px;
-  color: #fff; /* Text color */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow */
-  z-index: 1000;
+  padding: 0 15px; /* Add padding for better spacing */
 }
 
-.text-success {
-  color: #1db954; /* Spotify green color */
+@media (max-width: 767px) {
+  .header-container {
+    padding: 0 10px; /* Reduce padding on smaller screens */
+  }
+}
+
+.user-icon-container {
+  position: relative; /* Position the dropdown menu relative to the user icon */
+  display: inline-block; /* Ensure the user icon and dropdown menu are displayed inline */
 }
 
 .user-icon {
   cursor: pointer;
-  margin-left: 700px;
-  padding: 5px;
 }
 
 .hover-container {
   position: absolute;
-  top: 100%;
+  top: 100%; /* Position the dropdown menu below the user icon */
   right: 0;
-  color: black;
-  background-color: #fff; /* Light background color for options */
-  border: 1px solid #ddd; /* Add a border */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow */
-  list-style: none;
-  padding: 10px;
-  margin: 0;
+  background-color: #fff; /* Background color for the dropdown menu */
+  border: 1px solid #ccc; /* Add border for better visibility */
+  border-radius: 4px; /* Rounded corners for the dropdown menu */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add box shadow for better depth */
+  z-index: 1; /* Ensure the dropdown menu appears above other content */
+}
+
+.hover-container ul {
+  margin: 0; /* Remove default margin for better layout */
+  padding: 0; /* Remove default padding for better layout */
 }
 
 .hover-container li {
-  padding: 8px;
-  cursor: pointer;
-}
-
-.hover-container li:hover {
-  background-color: #f5f5f5; /* Background color on hover */
+  list-style-type: none; /* Remove default list bullet */
+  padding: 8px 16px; /* Add padding to each list item for better spacing */
+  cursor: pointer; /* Change cursor to pointer for better indication of clickable items */
 }

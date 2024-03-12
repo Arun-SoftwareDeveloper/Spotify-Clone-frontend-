@@ -180,7 +180,7 @@ const SongList = () => {
             <br /> <br /> <br />
             <br></br>
             <br /> <br />
-            <ArtistsList />
+            {/* <ArtistsList /> */}
             <div className="songs-container">
               <Row>
                 {songs.map((song, index) => (

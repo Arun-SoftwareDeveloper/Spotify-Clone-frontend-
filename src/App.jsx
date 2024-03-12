@@ -5,6 +5,8 @@ import RegisterForm from "./Forms/RegisterFom";
 import LoginForm from "./Forms/LoginForm";
 import { ToastContainer } from "react-bootstrap";
 import LikedSongs from "./Components/LikedSongs";
+import ArtistsList from "./Components/ArtistsList";
+import ArtistSongs from "./Components/ArtistSongs";
 
 function App() {
   // Initialize likedSongs state
@@ -20,6 +22,7 @@ function App() {
             path="/songsList"
             element={<SongList setLikedSongs={setLikedSongs} />}
           />
+          <Route path="/artistSongs/:artistName" element={<ArtistSongs />} />
           <Route
             path="/likedSongs"
             element={<LikedSongs likedSongs={likedSongs} />}

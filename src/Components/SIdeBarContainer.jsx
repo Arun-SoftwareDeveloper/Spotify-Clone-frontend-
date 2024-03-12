@@ -1,13 +1,11 @@
-// Sidebar.js
-
 import React from "react";
 import { NavLink } from "react-router-dom";
 import "../Styles/SideBarContainer.css";
 
-const SIdeBarContainer = ({ nowPlaying, likedSongs }) => {
+const Sidebar = ({ nowPlaying, likedSongs }) => {
   return (
     <div className="sidebar">
-      <NavLink to="/" exact={true.toString()} activeClassName="active">
+      <NavLink to="/" exact activeClassName="active">
         Home
       </NavLink>
       <NavLink to="/now-playing" activeClassName="active">
@@ -20,12 +18,10 @@ const SIdeBarContainer = ({ nowPlaying, likedSongs }) => {
       {nowPlaying && (
         <div className="sidebar-now-playing">
           <h4>Now Playing:</h4>
-          <img
-            src={nowPlaying.imagePath}
-            alt={nowPlaying.title}
-            style={{ width: "100px", height: "100px" }}
-          />
-          <p>{nowPlaying.title}</p>
+          <div className="song-info">
+            <img src={nowPlaying.imagePath} alt={nowPlaying.title} />
+            <p>{nowPlaying.title}</p>
+          </div>
         </div>
       )}
 
@@ -39,4 +35,4 @@ const SIdeBarContainer = ({ nowPlaying, likedSongs }) => {
   );
 };
 
-export default SIdeBarContainer;
+export default Sidebar;
